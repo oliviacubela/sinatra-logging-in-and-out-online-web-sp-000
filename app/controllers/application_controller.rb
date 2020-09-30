@@ -18,7 +18,8 @@ class ApplicationController < Sinatra::Base
       redirect '/account'
     end
     if !(self.current_user && self.is_logged_in?)
-    redirect '/error'
+      redirect '/error'
+    end
   end
 
   get '/account' do
