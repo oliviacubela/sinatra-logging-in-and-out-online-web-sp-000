@@ -23,8 +23,8 @@ class ApplicationController < Sinatra::Base
   get '/account' do
     if self.current_user && self.is_logged_in?
       erb :account
-
-    erb :'/users/home'
+    end
+    redirect :'/error'
   end
 
   get '/logout' do
