@@ -21,6 +21,8 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/account' do
+    if self.current_user && self.is_logged_in?
+      erb :account
 
     erb :'/users/home'
   end
